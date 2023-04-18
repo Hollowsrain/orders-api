@@ -5,18 +5,18 @@
 | Method | Url | Description | Sample Valid Request Body |
 | ------ | --- | ----------- |---------------------------|
 | GET    | /services | Retrieve all services |                           |
-| GET    | /services/{id} | Retrieve a specific service by ID | [JSON](#fullCustomerGet)    |
+| GET    | /services/{id} | Retrieve a specific service by ID | [JSON](#createupdate-service)    |
 | POST   | /services | Create a new service | [JSON](#createservice)    |
-| PUT    | /services/{id} | Update a specific service by ID | [JSON](#createservice)    |
+| PUT    | /services/{id} | Update a specific service by ID | [JSON](#createupdate-service)    |
 | DELETE | /services/{id} | Delete a specific service by ID |                           |
 
 ### Customer
 | Method | Url | Description | Sample Valid Request Body |
 | ------ | --- | ----------- |---------------------------|
-| GET    | /customers | Retrieve all customers |                           |
-| GET    | /customers/{id} | Retrieve a specific customer by ID |                           |
-| POST   | /customers | Create a new customer | [JSON](#createCust)       |
-| PUT    | /customers/{id} | Update a specific customer by ID | [JSON](#createCust)       |
+| GET    | /customers | Retrieve all customers |      [JSON](#get-response-for-customer-with-account-msisdn-and-ordered-service)                     |
+| GET    | /customers/{id} | Retrieve a specific customer by ID |             |
+| POST   | /customers | Create a new customer | [JSON](#createupdate-customer)       |
+| PUT    | /customers/{id} | Update a specific customer by ID | [JSON](#createupdate-customer)       |
 | DELETE | /customers/{id} | Delete a specific customer by ID |                           |
 
 ### Account
@@ -24,8 +24,8 @@
 | ------ | --- | ----------- |---------------------------|
 | GET    | /customers/{customerId}/accounts | Retrieve all accounts for a specific customer |                           |
 | GET    | /accounts/{id} | Retrieve a specific account by ID |                           |
-| POST   | /customers/{customerId}/accounts | Create a new account for a specific customer | [JSON](#createAcc)        |
-| PUT    | /accounts/{id} | Update a specific account by ID | [JSON](#createAcc)        |
+| POST   | /customers/{customerId}/accounts | Create a new account for a specific customer | [JSON](#createupdate-account)        |
+| PUT    | /accounts/{id} | Update a specific account by ID | [JSON](#createupdate-account)        |
 | DELETE | /accounts/{id} | Delete a specific account by ID |                           |
 
 ### MSISDN
@@ -33,8 +33,8 @@
 | ------ | --- | ----------- |---------------------------|
 | GET    | /accounts/{accountId}/msisdns | Retrieve all MSISDNs for a specific account |                           |
 | GET    | /msisdns/{id} | Retrieve a specific MSISDN by ID |                           |
-| POST   | /accounts/{accountId}/msisdns | Create a new MSISDN for a specific account | [JSON](#createNr)         |
-| PUT    | /msisdns/{id} | Update a specific MSISDN by ID | [JSON](#createNr)         |
+| POST   | /accounts/{accountId}/msisdns | Create a new MSISDN for a specific account | [JSON](#createupdate-msisdn)         |
+| PUT    | /msisdns/{id} | Update a specific MSISDN by ID | [JSON](#createupdate-msisdn)         |
 | DELETE | /msisdns/{id} | Delete a specific MSISDN by ID |                           |
 
 ### OrderedService
@@ -42,8 +42,8 @@
 | ------ | --- | ----------- |---------------------------|
 | GET    | /msisdns/{msisdnId}/ordered-services | Retrieve all ordered services for a specific MSISDN |                           |
 | GET    | /ordered-services/{id} | Retrieve a specific ordered service by ID |                           |
-| POST   | /msisdns/{msisdnId}/ordered-services | Create a new ordered service for a specific MSISDN | [JSON](#createOrd)        |
-| PUT    | /ordered-services/{id} | Update a specific ordered service by ID | [JSON](#createOrd)        |
+| POST   | /msisdns/{msisdnId}/ordered-services | Create a new ordered service for a specific MSISDN | [JSON](#createupdate-orderedservice)        |
+| PUT    | /ordered-services/{id} | Update a specific ordered service by ID | [JSON](#createupdate-orderedservice)        |
 | DELETE | /ordered-services/{id} | Delete a specific ordered service by ID |                           |
 ---
 ##### <a id="createCust">Create/Update Customer</a>
