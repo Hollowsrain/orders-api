@@ -1,3 +1,14 @@
+# Technologies used
+## Spring boot 3
+## H2
+## Docker
+## CircleCi for CI/CD
+## JUNIT5 
+## JAVA 17
+## OpenaAPI for swagger 2
+## Lombok
+## Data JPA
+
 # Build Status [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Hollowsrain/orders-api/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Hollowsrain/orders-api/tree/master)
 # End-points for api usages
 
